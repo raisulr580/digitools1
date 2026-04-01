@@ -3,13 +3,13 @@ import { toast } from 'react-toastify';
 function CartSection({ cart, removeFromCart, proceedToCheckout }) {
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
-  // Improved renderIcon function
+  
   const renderIcon = (icon) => {
     if (!icon) return '📦';
 
     let imageSrc = icon;
 
-    // If it's a local image (like shopping-cart.png)
+   
     if (!icon.startsWith('http') && !icon.startsWith('/')) {
       imageSrc = '/' + icon;
     }
@@ -23,7 +23,7 @@ function CartSection({ cart, removeFromCart, proceedToCheckout }) {
     );
   };
 
-  // Empty Cart State
+  
   if (cart.length === 0) {
     return (
       <div className="text-center py-16 md:py-20 px-4">
